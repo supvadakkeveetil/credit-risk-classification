@@ -17,9 +17,9 @@ Based on the data we need to predict the Accuracy Score and the Classification R
   - Separate the data into labels and features. Create the label set y from the loan_status column and the features dataframe X from the other columns 
   - Split the data into training and testing datasets using the train_test_split
 * Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
- - Create a LogisticRegressin Model with the data
- - Make predictions using the testing data
- - Evaluate model's performance using the Confusion Matrix and the Classification Report
+  - Create a LogisticRegressin Model with the data
+  - Make predictions using the testing data
+  - Evaluate model's performance using the Confusion Matrix and the Classification Report
 
 ## Results
 

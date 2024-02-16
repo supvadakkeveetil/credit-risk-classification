@@ -2,11 +2,16 @@
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
-
 * Explain the purpose of the analysis.
+  The purpose of the analysis is
+  - To build a model that can identify the credit worthiness of borrowers
 * Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
+  - Historical lending activity dataset froma peer to peer lending services company
+  - Structure of the DataFrame
+![DF_structure](https://github.com/supvadakkeveetil/credit-risk-classification/assets/144635564/3d70d451-107d-4a59-b4c4-5c3d76f27fa9)
+
+Based on the data we need to predict the Accuracy Score and the Classification Report
+
 * Describe the stages of the machine learning process you went through as part of this analysis.
   - Read data from the CSV file into a Pandas Data Frame
   - Separate the data into labels and features. Create the label set y from the loan_status column and the features dataframe X from the other columns 
@@ -18,8 +23,8 @@ In this section, describe the analysis you completed for the machine learning mo
 
 ## Results
 
-* Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
+* Machine Learning Model:
+  * Description of Models Accuracy, Precision, and Recall scores.
 ![ML_Accuracy_score](https://github.com/supvadakkeveetil/credit-risk-classification/assets/144635564/175e2ce4-0ab0-4353-94fa-0be13185b075)
 
 
@@ -28,3 +33,6 @@ In this section, describe the analysis you completed for the machine learning mo
 Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
 * Which one seems to perform best? How do you know it performs best?
 * Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+The accuracy score for the test dataset is about 99%. So it predicts 99.24% loans correctly.
+Based on the Classification report, The model can predict the Healthy loans(0) with 100% accuracy, and the High-risk loans(1's) with about 87% (however, based on the recall it missed 11% of them).
+The model identifies the healthy and high risk loans effectively, which is very good as misclassification could lead to financial burden for the borrower but there is a need to consider the potential consequences of false negatives of high risk loans (1's) as it could mean financial loss for the lender if these loans default.
